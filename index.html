@@ -7,16 +7,20 @@
 </head>
 <body>
     <script>
-      const mult =  (n) => {
-       n *= n 
-       return n;
-    }
-    //OU
-    /*const mult = (n) => (n *= n)
+      function mult(values, func){
+        //console.log(arguments);
+        for (let i = 0; i < values.length; i++){
+         
+          //values[i] *= values[i]; // n *= n
+          values[i] = func(values[i]);
+        }
+        return values;
+      }
 
-  console.log(mult(10));
-
-    console.log(mult(10));*/
+      const values = [1, 2, 3, 4, 10, 20]
+      const func = (n) => n * 2;
+//callbacks: map, filter, reduce
+      console.log(mult(values, func));
     </script>
 </body>
 </html>
