@@ -8,18 +8,22 @@
 <body>
     <script>
 
-        function sum(){
-            let res = 0;
+        function mult(n){
+           n *= n
+            return n;
 
-          for (const n of arguments){
-            res += n;
-          }
-            
-          return res;
-           
         }
-        console.log(sum());
-       console.log(sum(1, 3, 4, 5, 10, 15, 40));
+        let numVal = 10;
+        console.log(mult(numVal));
+        console.log(numVal);
+
+        function multObj(obj) {
+          obj.value *= obj.value
+          return obj;
+        }
+
+        const numObj= { value: 10}
+        console.log(multObj(numObj));
     </script>
 </body>
 </html>
